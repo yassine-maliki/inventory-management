@@ -1,0 +1,20 @@
+Warehouse;Item;Location;Quantity
+Warehouse A;Poduit 1;ABC1;60
+Warehouse A;Poduit 2;ABC2;10
+Warehouse A;Poduit 3;ABC3;14
+Warehouse B;Produit 1;ABC4;22
+Warehouse B;Produit 2;ABC5;35
+Warehouse B;Produit 3;ABC6;45
+Warehouse B;Produit 4;ABC7;21
+Warehouse C;Produit 1;ABC8;44
+Warehouse C;Produit 2;ABC9;112
+Warehouse C;Produit 3;ABC10;11
+Warehouse D;Produit 1;ABC11;21
+Warehouse D;Produit 2;ABC12;23
+Warehouse D;Produit 3;ABC13;22
+Warehouse D;Produit 4;ABC14;36
+Warehouse E;item 55;ABC15;45
+Warehouse E;item 56;ABC16;2
+Warehouse E;item 57;ABC17;65
+Warehouse E;item 58;ABC18;4542
+Warehouse E;item 59;ABC19;12
