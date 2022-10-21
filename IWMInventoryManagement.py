@@ -62,6 +62,8 @@ def main():
 		# Affichage des logs
 		if st.checkbox("Show adjustment log"):
 			log_df = pd.read_csv("log.csv", sep=",")
+			#log_df["time"] = pd.to_datetime(log_df["time"], format="%Y-%m-%d %H:%M:%S")
+			log_df.sort_values(by='Date', ascending=False, inplace=True)
 			log_df
 	else:
 		attention = '<p style="font-family:sans-serif; color:RED; font-size: 22px;">First choose a Warehouse and an item !</p>'
