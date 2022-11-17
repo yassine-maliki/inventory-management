@@ -1,0 +1,127 @@
+{
+	"code": 4,
+	"content": {
+		"list": [
+			{
+				"code": "item6778",
+				"name": "Di",
+				"quantity": "68",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "T",
+					"travee": "01",
+					"niveau": "04",
+					"alveole": "08"
+				}
+			},
+			{
+				"code": "item9633",
+				"name": "Merci",
+				"quantity": "68",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "N",
+					"travee": "07",
+					"niveau": "04",
+					"alveole": "08"
+				}
+			},
+			{
+				"code": "item8298",
+				"name": "Albertina",
+				"quantity": "32",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "G",
+					"travee": "03",
+					"niveau": "09",
+					"alveole": "06"
+				}
+			},
+			{
+				"code": "item4843",
+				"name": "Laurene",
+				"quantity": "2",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "X",
+					"travee": "02",
+					"niveau": "09",
+					"alveole": "06"
+				}
+			},
+			{
+				"code": "item8394",
+				"name": "Elena",
+				"quantity": "67",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "B",
+					"travee": "03",
+					"niveau": "02",
+					"alveole": "01"
+				}
+			},
+			{
+				"code": "item4605",
+				"name": "Perry",
+				"quantity": "33",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "B",
+					"travee": "01",
+					"niveau": "06",
+					"alveole": "09"
+				}
+			},
+			{
+				"code": "item7807",
+				"name": "Bettine",
+				"quantity": "46",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "V",
+					"travee": "03",
+					"niveau": "02",
+					"alveole": "09"
+				}
+			},
+			{
+				"code": "item3698",
+				"name": "Madeleine",
+				"quantity": "74",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "A",
+					"travee": "09",
+					"niveau": "04",
+					"alveole": "09"
+				}
+			},
+			{
+				"code": "item5991",
+				"name": "Aryn",
+				"quantity": "46",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "U",
+					"travee": "06",
+					"niveau": "08",
+					"alveole": "05"
+				}
+			},
+			{
+				"code": "item22",
+				"name": "Carlie",
+				"quantity": "48",
+				"location": {
+					"warehouse": "warehouse1",
+					"allee": "E",
+					"travee": "09",
+					"niveau": "05",
+					"alveole": "04"
+				}
+			}
+		]
+	}
+}

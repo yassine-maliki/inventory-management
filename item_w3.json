@@ -1,0 +1,127 @@
+{
+	"code": 4,
+	"content": {
+		"list": [
+			{
+				"code": "item6985",
+				"name": "Tobe",
+				"quantity": "42",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "J",
+					"travee": "04",
+					"niveau": "09",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item708",
+				"name": "Latisha",
+				"quantity": "47",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "T",
+					"travee": "06",
+					"niveau": "03",
+					"alveole": "06"
+				}
+			},
+			{
+				"code": "item432",
+				"name": "Roxane",
+				"quantity": "37",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "M",
+					"travee": "09",
+					"niveau": "01",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item6849",
+				"name": "Lory",
+				"quantity": "23",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "I",
+					"travee": "09",
+					"niveau": "07",
+					"alveole": "06"
+				}
+			},
+			{
+				"code": "item6369",
+				"name": "Ginnie",
+				"quantity": "32",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "C",
+					"travee": "09",
+					"niveau": "04",
+					"alveole": "04"
+				}
+			},
+			{
+				"code": "item7691",
+				"name": "Wendi",
+				"quantity": "93",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "Q",
+					"travee": "03",
+					"niveau": "09",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item5094",
+				"name": "Winny",
+				"quantity": "47",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "L",
+					"travee": "03",
+					"niveau": "05",
+					"alveole": "06"
+				}
+			},
+			{
+				"code": "item276",
+				"name": "Paule",
+				"quantity": "26",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "O",
+					"travee": "01",
+					"niveau": "09",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item959",
+				"name": "Cassondra",
+				"quantity": "35",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "A",
+					"travee": "07",
+					"niveau": "09",
+					"alveole": "03"
+				}
+			},
+			{
+				"code": "item8403",
+				"name": "Maridel",
+				"quantity": "23",
+				"location": {
+					"warehouse": "warehouse3",
+					"allee": "R",
+					"travee": "05",
+					"niveau": "03",
+					"alveole": "08"
+				}
+			}
+		]
+	}
+}

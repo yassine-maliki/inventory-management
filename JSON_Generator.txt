@@ -1,0 +1,33 @@
+{
+	"code": 2,
+	"content": {
+		"list": [
+			"Warehouse1",
+			"Warehouse2",
+			"Warehouse3",
+			"Warehouse4"
+		]
+	}
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////
+
+{
+    "code": 4,
+    "content": {
+        "list": repeat(10,{
+            "code": "item"+random(0,9999),
+            "name": firstname(),
+            "quantity": random(1,100),
+            "location": {
+                "warehouse": "warehouse1",
+                "allee": regex(/[A-Z]/),
+                "travee": "0"+random(1,9),
+                "niveau": "0"+random(1,9),
+                "alveole": "0"+random(1,9)
+            }
+          })
+    }
+}

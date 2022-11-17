@@ -1,0 +1,127 @@
+{
+	"code": 4,
+	"content": {
+		"list": [
+			{
+				"code": "item7530",
+				"name": "Marleah",
+				"quantity": "5",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "W",
+					"travee": "02",
+					"niveau": "03",
+					"alveole": "02"
+				}
+			},
+			{
+				"code": "item5575",
+				"name": "Ruthe",
+				"quantity": "1",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "E",
+					"travee": "05",
+					"niveau": "07",
+					"alveole": "02"
+				}
+			},
+			{
+				"code": "item9828",
+				"name": "Fidelia",
+				"quantity": "65",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "V",
+					"travee": "01",
+					"niveau": "06",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item3718",
+				"name": "Nickie",
+				"quantity": "49",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "J",
+					"travee": "06",
+					"niveau": "08",
+					"alveole": "09"
+				}
+			},
+			{
+				"code": "item1536",
+				"name": "Valera",
+				"quantity": "48",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "C",
+					"travee": "02",
+					"niveau": "05",
+					"alveole": "03"
+				}
+			},
+			{
+				"code": "item6954",
+				"name": "Rebeca",
+				"quantity": "91",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "E",
+					"travee": "01",
+					"niveau": "03",
+					"alveole": "04"
+				}
+			},
+			{
+				"code": "item1862",
+				"name": "Marika",
+				"quantity": "15",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "F",
+					"travee": "01",
+					"niveau": "09",
+					"alveole": "09"
+				}
+			},
+			{
+				"code": "item4875",
+				"name": "Felice",
+				"quantity": "15",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "L",
+					"travee": "03",
+					"niveau": "09",
+					"alveole": "08"
+				}
+			},
+			{
+				"code": "item4298",
+				"name": "Sandie",
+				"quantity": "37",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "Y",
+					"travee": "07",
+					"niveau": "07",
+					"alveole": "07"
+				}
+			},
+			{
+				"code": "item5918",
+				"name": "Cathie",
+				"quantity": "48",
+				"location": {
+					"warehouse": "warehouse2",
+					"allee": "B",
+					"travee": "08",
+					"niveau": "06",
+					"alveole": "09"
+				}
+			}
+		]
+	}
+}
