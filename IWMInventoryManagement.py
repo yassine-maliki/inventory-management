@@ -45,7 +45,7 @@ def main():
 		# Warehouse Section
 		DATA = { 'code': 3,
            'token': TOKEN,
-           'content': {}}
+           'content': {"type": "warehouse"}}
 
 		r = requests.post(url = URL, json = DATA)
 		answer = r.json()
@@ -67,19 +67,19 @@ def main():
 
 		r2 = requests.post('https://mamazon.zefresk.com/query.php',json=DATA2)
 		item_list = r2.json()['content']['list']
-		choose_item = st.sidebar.selectbox("Select the item", options=[item["name"] for item in item_list])
+
+
+		df_items = pd.json_normalize(np.array(item_list))
+		unique_item_list = df_items["name"].unique()
+
+		choose_item = st.sidebar.selectbox("Select the item", options=[item for item in unique_item_list])
+		grouped_items = df_items.loc[df_items["name"] == choose_item].sort_values("quantity", ascending=False).reset_index(drop=True)
+		grouped_items_new = grouped_items.drop(columns = ["name", "location.warehouse"])
 
 
 
-		st.write("The location and quantity of ", choose_item, "in ", choose_warehouse, " :")
-
-		for i in range(len(item_list)):
-			if (item_list[i]["name"] == choose_item) :
-				pos = i
-
-		df = pd.json_normalize(item_list[pos])
-		df = df.rename(index={0: "Product details"})
-		st.write(df.T)
+		st.write("The locations and quantities of ", choose_item, "in ", choose_warehouse, " :")
+		st.write(grouped_items_new)
 
 
 		# Adjustment Section
@@ -93,7 +93,9 @@ def main():
 		elif(choose_adj == "YES"):
 			# Adjustment form
 			my_form = st.form(key = "adj_form")
-			new_qty = my_form.number_input(label = "Enter the new quantity", format="%d", step=1)
+
+			index_value = my_form.selectbox("Choose the index of the article to adjust", grouped_items.index.tolist())
+			adj = my_form.number_input(label = "Enter the quantity to add (+) or to remove (-)", format="%d", step=1)
 			submit = my_form.form_submit_button(label = "Adjust")
 
 			if submit :
@@ -102,20 +104,41 @@ def main():
                     "token": TOKEN,
                     "content": {
                         "location": {
-                            "warehouse": item_list[pos]["location"]["warehouse"],
-                            "allee": item_list[pos]["location"]["allee"],
-                            "travee": item_list[pos]["location"]["travee"],
-                            "niveau": item_list[pos]["location"]["niveau"],
-                            "alveole": item_list[pos]["location"]["alveole"]
+                            "warehouse": grouped_items.at[index_value, "location.warehouse"],
+                            "allee": grouped_items.at[index_value,"location.allee"],
+                            "travee": grouped_items.at[index_value,"location.travee"],
+                            "niveau": grouped_items.at[index_value,"location.niveau"],
+                            "alveole": grouped_items.at[index_value,"location.alveole"]
                             },
-                        "product": item_list[pos]["code"],
-                        "quantity": new_qty
+                        "product": grouped_items.at[index_value,"code"],
+                        "quantity": adj
                     }
                 }
 				res4 = requests.post('https://mamazon.zefresk.com/query.php',json=DATA3)
 				try :
 					if res4.json()["content"]["success"] == 1 :
 						st.success("Adjustment Done !")
+						DATA6 = { 'code': 5,
+				           'token': TOKEN,
+				           "content": {
+					           "location": {
+					               "warehouse": grouped_items.at[index_value, "location.warehouse"],
+					               "allee": grouped_items.at[index_value,"location.allee"],
+					               "travee": grouped_items.at[index_value,"location.travee"],
+					               "niveau": grouped_items.at[index_value,"location.niveau"],
+					               "alveole": grouped_items.at[index_value,"location.alveole"]
+					           },
+					           "product": grouped_items.at[index_value,"code"]}}
+
+
+						r6 = requests.post('https://mamazon.zefresk.com/query.php',json=DATA6)
+						updated_item = r6.json()['content']['list']
+						updated_item_df = pd.json_normalize(np.array(updated_item))
+						updated_item_df.drop(columns = ["name", "location.warehouse"] , inplace=True)
+						st.write(updated_item_df)
+
+
+
 
 				except JSONDecodeError as e:
 					st.error('You are trying to remove more than the available stock', icon="🚨")
@@ -134,17 +157,6 @@ def main():
 
 	else:
 	    st.error("Login failed")
-
-		# TO DO :
-		# Gérer la cnx avec la bdd
-		# Récupérer la liste des warehouses depuis la bdd
-		# Récupérer la liste des items pour le warehouse sélectionné
-		# Adapter le formulaire pour l'envoie de la requête d'adjustment
-
-		# Afficher un msg de succès/erreur après l'envoie de la requête
-		# Ajouter un affichage des log (read du fichier) (case à cocher ?)
-
-
 
 
 if __name__ == "__main__":
